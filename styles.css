@@ -453,7 +453,7 @@ header{
 
 .home_brands {
     display: flex;
-    column-gap: 0.5em;
+    column-gap: 1em;
 }
 
 .img__brand {
