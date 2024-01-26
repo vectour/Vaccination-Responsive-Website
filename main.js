@@ -7,13 +7,10 @@ if(navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu')
     })
-    
-}
 
 
 if(navClose) {
     navToggle.addEventListener('click', () => {
-        console.log('damn')
-        // navMenu.classList.remove('show-menu')
+        navMenu.classList.remove('show-menu')
     })
-}
+})
