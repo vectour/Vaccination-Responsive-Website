@@ -8,9 +8,13 @@ if(navToggle) {
         navMenu.classList.add('show-menu')
     })
 
+}
+
 
 if(navClose) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
-    })
+    
 })
+
+}
