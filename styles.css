@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* ==============VARIABLE CSS============== */
+:root{
+    --header-height: 3.5rem;
+
+/* ==========Colours================ */
+/*Colour Mode - RGBA*/
+
+--primary-color: rgba(11, 21, 60, 1);
+--secondary-color: rgba(23, 194, 236, 1);
+--grey-color:  rgba(255, 255, 255, 0.70);
+--white-colour: #ffff;
+--grey-transparent-color: rgba(255, 255, 255, 0.20);
+
+/* ============Font and Topography============ */
+/* .5rem = 8px | 1rem = 16px */
+--body-font: 'Montserrat', sans-serif;
+--biggest-font-size: 3rem;
+--bigger-font-size: 1.8rem;
+--h1-font-size: 1.75rem;
+--h2-font-size: 1.5rem;
+--h3-font-size: 1.25rem;
+--normal-font-size: 1rem;
+--small-font-size: 0.875rem;
+--smaller-font-size: 0.675rem;
+
+/* ============Font Weight====================== */
+--font-regular: 400;
+--font-semi-bold: 600;
+--font-bold: 700;
+
+/* ============ z-index========================== */
+--z-tooltip:10;
+--z-fixed: 100;
+
+}
+
+/* =================Responsive Topography========== */
+@media screen and (min-width: 1150px)  {
+    :root{
+        --biggest-font-size: 5rem;
+        --bigger-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+    }
+    
+}
+
+
+/* ===================  BASE  =================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body,button{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+
+button{
+    border: none;
+    outline: none;
+}
+
+h1,h2,h3,h4,p{
+    font-family: var(--body-font);
+    color: var(--white-colour);
+    font-weight: var(--font-bold);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* ========================= REUSABLE CLASSES ====================*/
+.container{
+    max-width: 1120px;
+    margin: 1.5rem 3rem; 
+}   
+
+.grid{
+    display: grid;
+    gap: 1.5rem
+}
+
+.section{
+    padding: 5rem 1rem; 
+}
+
+.section__title {
+    font-size: var(--bigger-font-size);
+    font-family: var(--second-font);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .main {
+    overflow: hidden; /* For animation ScrollReveal */
+  }
+
+  .flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .button{
+    display: inline-flex;
+    padding: 1rem 1.5rem;
+    color: var(--white-colour);
+    background: var(--secondary-color);
+    border-radius: 20px;
+    font-weight: var(--font-semi-bold);
+    font-size: var(--small-font-size)
+  }
+
+  .transparent__btn{
+    background: var(--grey-transparent-color);
+  }
+
+
+/* ================= HEADER ========== */
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: var(--z-fixed);
+}
+
+.nav{
+    position: relative;
+    height: var(--header-height);
+}
+
+.nav__logo{
+    color: var(--white-colour);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+    transition: color .4s;
+}
+
+.nav__logo:hover{
+    color: var(--secondary-color);
+}
+
+.nav__close,
+.nav__toggle{
+    font-size: 1.5rem;
+    color: var(--white-colour);
+    cursor: pointer;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1150px) {
+    .nav__menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: hsla(0, 0%, 6%, 0.2 );
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);  /* For Safari */
+        width: 80%;
+        height: 100%;
+        padding: 6rem 3rem 0;
+        transition: right .4s;
+
+    }
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.nav__link{
+    color: var(--white-colour);
+    font-weight: var(--font-semi-bold);
+    transition: color .01s;
+}
+
+.nav__link:hover{
+    color: var(--secondary-color)
+}
+
+.nav__close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.btn__status{
+    margin-top: 5rem;
+}
+
+
+/* ================== Show Menu ================ */
+.show-menu{
+    right: 0;
+}
+
+/* ===================Blur Header =================*/
+.blur__header::after{
+    content: '';
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    background-color: hsla(0, 0%, 6%, 0.2 );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);  /* For Safari */
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+/* =================================HOME================================== */
+
+.home{
+    position: relative;
+    padding-top: 6.5rem;
+}
+
+.home__container{
+    row-gap: 2rem;
+}
+
+.home__main{
+    margin-bottom: 1rem;
+}
+
+.home__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.home__bg{
+    object-fit: cover;
+}
+
+.home__data{
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.home-title-header{
+    color: var(--secondary-color);
+    font-size: var(--small-font-size);
+    margin-bottom: 1.5rem;
+}
+
+.home-title{
+    font-size: var(--bigger-font-size);
+    margin-bottom: 1.5rem;
+}
+
+.vax-title{
+    color: var(--secondary-color);
+}
+
+.home__title__footer{
+    color: var(--grey-color);
+    font-size: var(--small-font-size);
+    margin-bottom: 1.5rem;
+}
+
+.home__buttons{
+    column-gap: 1rem;
+    font-size: var(--small-font-size);
+    text-wrap: nowrap;
+}
+
+.btn__vax:hover{
+    background: var(--white-colour);
+    color: var(--secondary-color);
+}
+
+.btn__help{
+    background: rgba(255, 255, 255, 0.20);
+    border: 2px solid var(--secondary-color);
+}
+
+.home__image{
+    position: relative;
+    max-width: 400px;
+    justify-content: center;
+}
+
+.home__img__left,
+.home__img__right,
+.home__img__bottom{
+    position: absolute;
+}
+
+.home__img__left{
+    background-color: var(--white-colour);
+    padding: 0.5rem 0.5rem;
+    border-radius: 10px;
+    width: 60px;
+    top: 40%;
+    left: -10%;
+}
+
+.home__img__right{
+    background-color: var(--white-colour);
+    padding: 0.5rem 0.5rem;
+    border-radius: 10px;
+    width: 60px;
+    top: 40%;
+    right: -5%;
+}
+
+.home__img__bottom{
+    background-color: rgba(255, 255, 255, 0.20);
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    bottom: -10%;
+    left: -10%;
+    column-gap: 1rem;
+}
+
+.home__img__bottom__item{
+    width: 30px;
+}
+
+.home__img__bottom__text{
+    color: var(--white-colour);
+    font-size: var(--small-font-size);
+}
+
+.home__img__bottom__text__spe{
+    color: var(--secondary-color);
+}
+
+
+/*======================== HOME SCHEDULE ==========================*/
+
+.home__schedule{
+    color: var(--white-colour);
+}
+
+.schedule__time{
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    font-weight: var(--font-semi-bold);
+}
+
+.schedule_icon{
+    padding: 0.25rem;
+    background-color: var(--grey-transparent-color);
+    border-radius: 6px;
+}
+
+.schedule__time p{
+    font-size: var(--normal-font-size);
+}
+
+.schedule{
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding-top: 1rem;
+}
+
+.schedule__container{
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+}
+
+.schedule__item{
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.schedule__item.schedule_icon{
+    height: auto;
+}
+
+.schedule__item__info{
+    font-size: var(--small-font-size);
+}
+
+.schedule__item__info__title{
+    color: var(--grey-color)
+}
+
+
+.schedule__btn{
+    width: 100px;
+    margin-top: 1rem;
+    text-align: center;
+
+}
+
+/* =============================== HOME BRANDS ================================ */
+
+.brands{
+    background: var(--grey-color);
+}
+
+
+.img__brand{
+    flex-grow: 1;
+}
+
+
+
+
+/* =========================CHECK RESULT======================================= */
+.check__result__container{
+    background: rgba(255, 255, 255, 0.05);
+    width: 90%;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+.check__result__title{
+    padding: 1rem 1.5rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: var(--white-colour);
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-size: var(--smaller-font-size);
+}
+
+.check__result__form{
+    margin-top: 3rem;
+}
+
+
+
+
+/* =================Responsive Topography========== */
+/* =================Responsive Topography========== */
+/* =================Responsive Topography========== */
+/* =================Responsive Topography========== */

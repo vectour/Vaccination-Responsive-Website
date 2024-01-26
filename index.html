@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination NG</title>
+
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- CSS STYLESHEET -->
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- =============================================HEADER======================================= -->
+    <header>
+        <nav class="nav container flex-between">
+            <a href="#" class="nav__logo">Vaccination NG</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Schedule</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Close Button -->
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <a class="button btn__status">Check Status</a>
+            </div>
+
+            <!-- Toggle-->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==============================================MAIN======================================== -->
+
+    <!-- ============================HOME SECTION================================= -->
+    <section class="home section" id="home">
+        <img src="assets/images/background.png" alt="image" class="home__bg">
+
+        <div class="home__container container grid">
+            <div class="home__main">
+                <div class="home__data">
+                    <h3 class="home-title-header">Get Vaccinated. Boost your Immune System</h3>
+                    <div class="home__title">
+                        <h1 class="">COVID-19 Vaccination<br>Got Easier With,</h1>
+                        <h1 class="home-title vax-title">Vaccination.ng</h1>
+                    </div>
+                    
+                    <h3 class="home__title__footer">Vaccination.ng will help you find the nearest
+                        centre for vaccination, in all 36 states in Nigeria.</h3>
+                    <div class="home__buttons flex-between">
+                        <a class="button btn__vax">Get Vaccine</a>
+                        <a class="button btn__help">Help Center</a>
+                    </div>
+                </div>
+    
+                <div class="home__image">
+                    <img src="assets/images/vaccine.png" alt="image" class="home__img">
+                    <div class="home__img__left">
+                        <img src="assets//images/doctor-taking-safety.png">
+                    </div>
+                    <div class="home__img__right">
+                        <img src="assets//images/corona.png">
+                    </div> 
+                    <div class="home__img__bottom flex-between">
+                        <div class="home__img__bottom__images flex-between">
+                            <img src="assets//images/doc 1.png" class="home__img__bottom__item">                    
+                            <img src="assets//images/doc 2.png" class="home__img__bottom__item">                    
+                            <img src="assets//images/doc 3.png" class="home__img__bottom__item">
+                        </div>
+                        <div class="home__img__bottom__text">
+                            <h3>20+</h3>
+                            <h3 class="home__img__bottom__text__spe">Specialist</h3>
+    
+                        </div>
+                        
+    
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="home__schedule">
+                <div>
+                    <div class="schedule__time">
+                        <span class="schedule_icon"><i class='bx bx-time'></i></span>
+                        <p>Schedule your Vaccination</p>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <div class="schedule__container">
+                        <div class="schedule__item">
+                            <span class="schedule_icon"><i class='bx bx-time'></i></span>
+                            <div class="schedule__item__info">
+                                <h3 class="schedule__item__info__title">Location</h3>
+                                <h3 class="schedule__item__info__detail">Ikeja Lagos, Nigeria</h3>
+                            </div>
+                        </div>
+                        <div class="schedule__item">
+                            <span class="schedule_icon"><i class='bx bx-time'></i></span>
+                            <div class="schedule__item__info">
+                                <h3 class="schedule__item__info__title">Location</h3>
+                                <h3 class="schedule__item__info__detail">Ikeja Lagos, Nigeria</h3>
+                            </div>
+                        </div>
+                        <div class="schedule__item">
+                            <span class="schedule_icon"><i class='bx bx-time'></i></span>
+                            <div class="schedule__item__info">
+                                <h3 class="schedule__item__info__title">Location</h3>
+                                <h3 class="schedule__item__info__detail">Ikeja Lagos, Nigeria</h3>
+                            </div>
+                        </div>
+                        <a class="button schedule__btn">Submit</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="brands section" id="home">
+        <div class="home_brands container">
+            <img class="img__brand" src="assets/images/brands/Moderna_logo 1.png" alt="image">
+            <img class="img__brand" src="assets/images/brands/Pfizer.png" alt="image">
+            <img class="img__brand" src="assets/images/brands/sinovac.png" alt="image">
+            <img class="img__brand" src="assets/images/brands/zeneca.png" alt="image">
+        </div>
+    </section>
+
+    <!-- ====================================== CHECK RESULT ======================-->
+    <!-- <section class="check__result section">
+        <img src="assets/images/background.png" alt="image" class="home__bg">
+        <div class="check__result__container">
+            <span class="check__result__title">Check your COVID-19 result on our Database</span>
+            <div class="check__result__form">
+                <form>
+                    <input placeholder="Full Name" type="text">
+                    <input placeholder="NIK Number">
+                </form>
+                <button class="button transparent__btn check__btn">
+                    Check
+                </button>
+            </div>
+            <div class="check__result__certificate__need">
+                <p>Need a certificate for your COVID-19 result? <br>
+                    Please click here</p>
+            </div>
+        </div>
+
+    </section>
+     -->
+    <script src="index.js"></script>
+    
+
+</body>
+</html>
