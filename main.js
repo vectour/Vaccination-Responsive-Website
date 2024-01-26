@@ -18,3 +18,4 @@ if(navClose) {
 
 }
 
+const nav_link = document.querySelector('.nav__link')
