@@ -394,6 +394,7 @@ header{
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding-top: 1rem;
+    margin-top: 1rem;
 }
 
 .schedule__container{
@@ -403,7 +404,6 @@ header{
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-
 }
 
 .schedule__item{
@@ -420,10 +420,22 @@ header{
     font-size: var(--small-font-size);
 }
 
-.schedule__item__info__title{
-    color: var(--grey-color)
+.schedule__item__info__title,
+.schedule__item__info__detail{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
+.schedule__item__info__title{
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.schedule__item__info__detail{
+    color: var(--white-colour);
+}
 
 .schedule__btn{
     width: 100px;
@@ -436,6 +448,16 @@ header{
 
 .brands{
     background: var(--grey-color);
+    padding: 0.5em 1em;
+}
+
+.home_brands {
+    display: flex;
+    column-gap: 0.5em;
+}
+
+.img__brand {
+    width: 72px;
 }
 
 

@@ -12,10 +12,7 @@ if(navToggle){
 // Menu Hide
 if(navClose) {
     navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu')
-    
+        navMenu.classList.remove('show-menu')  
 })
-
 }
 
-const nav_link = document.querySelector('.nav__link')
