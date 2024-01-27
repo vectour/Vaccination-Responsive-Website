@@ -205,7 +205,6 @@ header{
         height: 100%;
         padding: 6rem 3rem 0;
         transition: right .4s;
-
     }
 }
 
@@ -1062,10 +1061,10 @@ header{
     background: rgba(196, 196, 196, 0.15);
     padding: 31px 12px 28px 13px;
     position: absolute;
-    left: 2em;
     top: -100px;
-    margin-left: auto;
-    margin-right: auto
+    left: 0;
+    right: 0;
+    margin: auto;
 
 }
 
@@ -1161,4 +1160,22 @@ header{
 
 .socials i{
     color: var(--white-colour);
+}
+
+
+/* Blur header */
+
+.blur_header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    right: -100%;
+    background-color: hsla(0, 0%, 6%, 0.2 );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);  /* For Safari */
+    width: 1000%;
+    height: 100%;
+
 }
