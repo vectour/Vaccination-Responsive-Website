@@ -79,10 +79,11 @@ button{
     outline: none;
 }
 
-h1,h2,h3,h4,p{
+h1,h2,h3,h4,p,a{
     font-family: var(--body-font);
     color: var(--white-colour);
     font-weight: var(--font-bold);
+    font-style: normal;
 }
 
 ul{
@@ -104,7 +105,7 @@ img{
 /* ========================= REUSABLE CLASSES ====================*/
 .container{
     max-width: 1120px;
-    margin: 1.5rem 3rem; 
+    margin: 1.5rem 2rem; 
 }   
 
 .grid{
@@ -113,7 +114,7 @@ img{
 }
 
 .section{
-    padding: 5rem 1rem; 
+    padding: 2em 1em; 
 }
 
 .section__title {
@@ -131,6 +132,11 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .flex-column{
+    display: flex;
+    flex-direction: column;
   }
 
   .button{
@@ -265,7 +271,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: -1;
+    z-index: -20;
 }
 
 .home__bg{
@@ -453,11 +459,13 @@ header{
 
 .home_brands {
     display: flex;
-    column-gap: 1em;
+    justify-content: space-between;
+    column-gap: 1.5em;
 }
 
 .img__brand {
     width: 72px;
+    height: 16px;
 }
 
 
@@ -469,17 +477,21 @@ header{
 
 
 /* =========================CHECK RESULT======================================= */
+.check__result{
+    position: relative;
+}
+
 .check__result__container{
     background: rgba(255, 255, 255, 0.05);
     width: 90%;
     margin: 1rem auto;
+    padding-bottom: 0.5em;
     border-radius: 10px;
+    position: relative;
 }
 
 .check__result__title{
     padding: 1rem 1.5rem;
-    top: 0;
-    left: 0;
     width: 100%;
     color: var(--white-colour);
     background: rgba(255, 255, 255, 0.10);
@@ -489,13 +501,439 @@ header{
 }
 
 .check__result__form{
-    margin-top: 3rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.check__result__form form input{
+    width: 80%;
+    width: 280px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.50);
+    background: none;
+    color: rgba(255, 255, 255, 0.50);
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 1em;
+    margin-bottom: 2em;
+
+}
+
+.check__result__form form input:hover{
+    border: 3px solid #17C2EC;
+    color: var(--white-colour);
+}
+
+.check__result__form button{
+    display: flex;
+    
+    width: 150px;
+    height: 50px;
+    padding: 20px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 3px solid #17C2EC;
+    background: rgba(196, 196, 196, 0.10);
+}
+
+.check__result__certificate__need{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    flex-shrink: 0;
+    margin: 3em 2em;
+    width: 80%;
+    text-align: center;
+    padding: 0.5em 0.5em;
+    border-radius: 10px;
+    background: rgba(196, 196, 196, 0.05);
+    
+}
+
+.check__result__certificate__need p{
+    color: #17C2EC;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* =================Why Get Vaccinated========== */
+
+.why__get__vaccine{
+    padding-left: 2.1em;
+}
+
+.why__get__vaccine__container{
+    text-align: left;
+}
+.why__get__vaccine__container h2{
+    color: #FFF;
+    font-family: "Montserrat";
+    font-size: var(--h2-font-size);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.why__get__vaccine__detail p{
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+
+.why__get__vaccine__reasons{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.875em;
+    
+}
+
+.icon__container{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(196, 196, 196, 0.10);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.reasons__against__immune{
+    width: 276px;
+    height: 280px;
+    flex-shrink: 0;
+    border-radius: 20px 80px 20px 20px;
+    background: rgba(196, 196, 196, 0.20);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25em;
+    margin-top: 2.5em;
+    padding: 20px 0 20px 20px;
+
+}
+
+.reasons__against__immune h3{
+    color: #17C2EC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.reasons__against__immune p{
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.read__more{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.reasons__against__immune a{
+    color: #17C2EC;
+    }
+
+.other__reasons{
+    row-gap: 30px;
+}
+
+.other__reasons__item {
+    width: 188px;
+    height: 202px;
+    border-radius: 20px;
+    border: 2.994px solid rgba(255, 255, 255, 0.50);
+    row-gap: 1.25em;
+    padding: 20px 0 20px 20px;
+
+}
+
+.other__reasons__item h3{
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.other__reasons__item a{
+    color: rgba(255, 255, 255, 0.50);
 }
 
 
+/* =================Get Vaccine Today========== */
+.get__vaccine__today{
+    background: var(--white-colour);
+    row-gap: 1.875em;
+    padding-left: 2.5em;
+}
 
+.get__vaccine__today h1,
+.get__vaccine__today a,
+.get__vaccine__today p{
+    color: #000;
+}
 
-/* =================Responsive Topography========== */
-/* =================Responsive Topography========== */
-/* =================Responsive Topography========== */
+.get__vaccine__today__title{
+    
+    text-align: center;
+    z-index: 10;
+}
+
+.get__vaccine__today__title h2{
+    color: #000;
+    font-size: var(--h2-font-size);
+    font-style: normal;
+    font-weight: var(--font-bold);
+    line-height: normal;
+}
+
+.get__vaccine__today__img{
+    width: 289.028px;
+    height: 418.329px;
+    border-radius: 15.212px;
+    background: #0B153C;
+    position: relative;
+}
+
+.get__vaccine__today__img img,
+.get__vaccine__today__img h3,
+.get__vaccine__today__img a{
+    position: absolute;
+    z-index: 10;
+}
+
+.covid__vaccine{
+    bottom: 0;
+}
+
+.corona__virus {
+    top: -7.5%;
+    left: -7.5%;
+}
+
+.get__vaccine__today__img h3{
+    top: 2em;
+    left: 35%;
+    text-align: center;
+}
+
+.get__vaccine__today__img a{
+    bottom: 2em;
+    left: 25%;
+}
+
+.form__input{
+    row-gap: 1.25em;
+    margin-bottom: 1em;
+}
+
+.get__vaccine__today__form form{
+    margin-bottom: 2em;
+}
+
+.get__vaccine__today__form label{
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.get__vaccine__today__form input{
+    color: rgba(0, 0, 0, 0.25);
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.get__vaccine__today__form .big__input{
+    width: 305px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(11, 21, 60, 0.15);
+    border: none;
+    padding: 1em;
+
+}
+
+.get__vaccine__today__form p{
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.form__input__container{
+    width: 305px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(11, 21, 60, 0.15);
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    column-gap: 0.25em;
+    padding: 1em;
+}
+
+.form__input__container input{
+    border: none;
+    background: none;
+    width: 100%;
+    height: 100%;
+}
+
+.btn__verify{
+    display: flex;
+    width: 150px;
+    height: 50px;
+    padding: 20px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn__submit{
+    display: flex;
+    width: 305px;
+    height: 50px;
+    padding: 20px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.5em;
+}
+
+.reg_status{
+    width: 95%;
+    
+}
+
+.reg_status p{
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.reg_status a{
+    color: #17C2EC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* =================Covid-19 Prevention=============== */
+.covid__prevention{
+    position: relative;
+}
+
+.man_with_covid_img{
+    position: absolute;
+    bottom: 0;
+    z-index: -10;
+    left: 20%;
+}
+
+.covid__prevention__detail{
+    row-gap: 10px;
+    text-align: center;
+    margin-bottom: 1.25em;
+}
+
+.covid__prevention__detail h3{
+    color: #FFF;
+    font-size: var(--small-font-size);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.covid__prevention__detail h1{
+    color: #fff;
+    font-size: var(--h2-font-size);
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.covid__prevention__detail p{
+    color: rgba(255, 255, 255, 0.50);
+    font-size: var(--small-font-size);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* Symptoms */
+
+.covid__symptoms{
+    row-gap: 2em;
+    justify-content: center;
+}
+
+.symptoms__group__1{
+    width: 82%;
+    border: 2px solid red;
+
+}
+
+.symptoms__group__2{
+    width: 88%;
+}
+
+.symptoms__group__3{
+    width: 96%;
+
+}
+
+.symptoms__each{
+    border-radius: 4.863px;
+    background: rgba(196, 196, 196, 0.20);
+    padding: 0.25em 0.25em 0.25em 1.2em;
+    text-align: center;
+    position: relative;
+}
+
+.symptoms__each p{
+    color: #17C2EC;
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    font-weight: 600;
+    line-height: normal;
+}
+
+.symptoms__each img{
+    position: absolute;
+    left: -20%;
+    top: -15%;
+    transform: scale(1.1);
+}
+
 /* =================Responsive Topography========== */
