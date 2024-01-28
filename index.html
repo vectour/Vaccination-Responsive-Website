@@ -44,7 +44,7 @@
 
             <!-- Toggle-->
             <div class="nav__toggle" id="nav-toggle">
-                <i class="bx bx-menu"></i>
+                <i class="bx bx-align-right"></i>
             </div>
         </nav>
     </header>
@@ -64,9 +64,9 @@
                         <h1 class="home-title vax-title">Vaccination.ng</h1>
                     </div>
                     
-                    <h3 class="home__title__footer">Vaccination.ng will help you find the nearest
+                    <h3 class="home__title__footer">Vaccination.ng will help you find the nearest<br>
                         centre for vaccination, in all 36 states in Nigeria.</h3>
-                    <div class="home__buttons flex-between">
+                    <div class="home__buttons">
                         <a class="button btn__vax">Get Vaccine</a>
                         <a class="button btn__help">Help Center</a>
                     </div>
@@ -97,51 +97,50 @@
                 </div>
 
             </div>
+        </section>
 
-            <div class="home__schedule">
-                <div>
-                    <div class="schedule__time">
-                        <span class="schedule_icon"><i class='bx bx-time'></i></span>
-                        <p>Schedule your Vaccination</p>
-                    </div>
-                </div>
-                <div class="schedule">
-                    <div class="schedule__container">
-                        <div class="schedule__item">
-                            <span class="schedule_icon"><i class='bx bx-time'></i></span>
-                            <div class="schedule__item__info">
-                                <h3 class="schedule__item__info__title">Location</h3>
-                                <h3 class="schedule__item__info__detail">Ikeja Lagos, Nigeria</h3>
-                            </div>
-                        </div>
-                        <div class="schedule__item">
-                            <span class="schedule_icon"><i class='bx bx-current-location'></i></span>
-                            <div class="schedule__item__info">
-                                <h3 class="schedule__item__info__title">Date</h3>
-                                <h3 class="schedule__item__info__detail">29 Febuary, 2022</h3>
-                            </div>
-                        </div>
-                        <div class="schedule__item">
-                            <span class="schedule_icon"><i class='bx bx-shield-plus'></i></span>
-                            <div class="schedule__item__info">
-                                <h3 class="schedule__item__info__title">Vaccine Type</h3>
-                                <h3 class="schedule__item__info__detail">Modena</h3>
-                            </div>
-                        </div>
-                        <a class="button schedule__btn">Submit</a>
-                    </div>
+        <section class="home__schedule section">
+            <div>
+                <div class="schedule__time">
+                    <span class="schedule_icon"><i class='bx bx-time'></i></span>
+                    <p>Schedule your Vaccination</p>
                 </div>
             </div>
-            
+            <div class="schedule">
+                <div class="schedule__container">
+                    <div class="schedule__item">
+                        <span class="schedule_icon"><i class='bx bx-time'></i></span>
+                        <div class="schedule__item__info">
+                            <h3 class="schedule__item__info__title">Location</h3>
+                            <h3 class="schedule__item__info__detail">Ikeja Lagos, Nigeria</h3>
+                        </div>
+                    </div>
+                    <div class="schedule__item">
+                        <span class="schedule_icon"><i class='bx bx-current-location'></i></span>
+                        <div class="schedule__item__info">
+                            <h3 class="schedule__item__info__title">Date</h3>
+                            <h3 class="schedule__item__info__detail">29 Febuary, 2022</h3>
+                        </div>
+                    </div>
+                    <div class="schedule__item">
+                        <span class="schedule_icon"><i class='bx bx-shield-plus'></i></span>
+                        <div class="schedule__item__info">
+                            <h3 class="schedule__item__info__title">Vaccine Type</h3>
+                            <h3 class="schedule__item__info__detail">Modena</h3>
+                        </div>
+                    </div>
+                    <a class="button schedule__btn">Submit</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="brands" id="home">
+    <section class="brands section" id="home">
         <div class="home_brands container">
             <img class="img__brand" src="assets/images/brands/Moderna_logo 1.png" alt="image">
             <img class="img__brand" src="assets/images/brands/Pfizer.png" alt="image">
-            <img class="img__brand" src="assets/images/brands/sinovac.png" alt="image">
             <img class="img__brand" src="assets/images/brands/zeneca.png" alt="image">
+            <img class="img__brand" src="assets/images/brands/sinovac.png" alt="image">
         </div>
     </section>
 
@@ -151,12 +150,10 @@
         <div class="check__result__container">
             <div class="check__result__title">Check your COVID-19 result on our Database</div>
             <div class="check__result__form">
-                <form>
-                    <input placeholder="Full Name" type="text">
-                    <input placeholder="NIK Number">
-                </form>
+                <input placeholder="Full Name" type="text">
+                <input placeholder="NIK Number">
                 <button class="button transparent__btn check__btn">
-                    Check
+                Check
                 </button>
             </div>
             <div class="check__result__certificate__need">
@@ -221,38 +218,40 @@
         <div class="get__vaccine__today__title">
             <h2>Get your vaccine<br>registration today</h2>
         </div>
-        <div class="get__vaccine__today__img">
-            <img class="covid__vaccine" alt="image" src="assets/images/covid-vaccine.png">
-            <img alt="image" class="corona__virus" src="assets/images/corona-virus.png">
-            <h3>Covid-19<br>Vaccine</h3>
-            <a class="button">Verify Status</a>
-
-        </div>
-        <div class="get__vaccine__today__form">
-            <form>
-                <div class="form__input flex-column">
-                    <label>Patient Full Name</label>
-                    <input class="big__input" type="text" placeholder="Full Name">
-                </div>
-                <div class="form__input flex-column">
-                    <label>Mobile Number</label>
-                    <p>Notifications for appointment and reminders<br>
-                        will be sent to this provided number</p>
-                    <div class="form__input__container">
-                        <img src="assets/images/twemoji_flag-nigeria.png">
-                        <i class=""></i>
-                        <i class=""></i>
-                        <input class="small__input" type="text" placeholder="Phone Number">
-                    </div>
-                </div>
-                <button class="button btn__verify">Verify</button>
-            </form>
-            <button class="button btn__submit">Submit</button>
-            <div class="reg_status flex-between">
-                <p>Already Registered?</p>
-                <a>Check Status</a>
+        <div class="get__vaccine__today__flex flex-column">
+            <div class="get__vaccine__today__img">
+                <img class="covid__vaccine" alt="image" src="assets/images/covid-vaccine.png">
+                <img alt="image" class="corona__virus" src="assets/images/corona-virus.png">
+                <h3>Covid-19<br>Vaccine</h3>
+                <a class="button">Verify Status</a>
+    
             </div>
-        </div>
+            <div class="get__vaccine__today__form">
+                <form>
+                    <div class="form__input flex-column">
+                        <label>Patient Full Name</label>
+                        <input class="big__input" type="text" placeholder="Full Name">
+                    </div>
+                    <div class="form__input flex-column">
+                        <label>Mobile Number</label>
+                        <p>Notifications for appointment and reminders<br>
+                            will be sent to this provided number</p>
+                        <div class="form__input__container">
+                            <img src="assets/images/twemoji_flag-nigeria.png">
+                            <i class=""></i>
+                            <i class=""></i>
+                            <input class="small__input" type="text" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <button class="button btn__verify">Verify</button>
+                </form>
+                <button class="button btn__submit">Submit</button>
+                <div class="reg_status flex-between">
+                    <p>Already Registered?</p>
+                    <a>Check Status</a>
+                </div>
+            </div>
+        </div>  
 
     </section>
 
@@ -416,6 +415,10 @@
             </div>
         </div>
     </section>
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-up-arrow-alt' ></i>
+    </a>
 
     <script src="main.js"></script>
     

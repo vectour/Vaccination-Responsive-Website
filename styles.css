@@ -109,7 +109,6 @@ input {
 
 /* ========================= REUSABLE CLASSES ====================*/
 .container{
-    max-width: 1120px;
     margin: 1.5rem 2rem; 
 }   
 
@@ -216,7 +215,7 @@ header{
 
 .nav__link{
     color: var(--white-colour);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--normal-font-size);
     transition: color .01s;
 }
 
@@ -247,7 +246,7 @@ header{
     position: absolute;
     width: 1000%;
     height: 100%;
-    background-color: hsla(0, 0%, 6%, 0.2 );
+    background-color: hsla(0, 0%, 6%, 0.25 );
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);  /* For Safari */
     top: 0;
@@ -285,7 +284,8 @@ header{
 
 .home__data{
     position: relative;
-    margin-bottom: 1.5rem;
+    margin: 0 auto 1.5rem;
+
 }
 
 .home-title-header{
@@ -310,6 +310,8 @@ header{
 }
 
 .home__buttons{
+    display: flex;
+    align-items: center;
     column-gap: 1rem;
     font-size: var(--small-font-size);
     text-wrap: nowrap;
@@ -325,10 +327,14 @@ header{
     border: 2px solid var(--secondary-color);
 }
 
+.home__data{
+    max-width: 400px;
+}
+
 .home__image{
     position: relative;
-    max-width: 400px;
-    justify-content: center;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .home__img__left,
@@ -382,6 +388,9 @@ header{
 
 .home__schedule{
     color: var(--white-colour);
+    margin: 0 auto;
+    padding-bottom: 0;
+    width: 90%;
 }
 
 .schedule__time{
@@ -403,18 +412,19 @@ header{
 
 .schedule{
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     padding-top: 1rem;
     margin-top: 1rem;
 }
 
 .schedule__container{
     background: rgba(255, 255, 255, 0.10);
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0 ;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+    transition: all .1s ease;
 }
 
 .schedule__item{
@@ -449,7 +459,6 @@ header{
 }
 
 .schedule__btn{
-    width: 100px;
     margin-top: 1rem;
     text-align: center;
 
@@ -459,17 +468,19 @@ header{
 
 .brands{
     background: var(--grey-color);
-    padding: 0.5em 1em;
+    padding: 0.5em 2em;
 }
 
 .home_brands {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    column-gap: 1.5em;
+    column-gap: 2em;
 }
 
 .img__brand {
-    width: 72px;
+    max-width: 200px;
+    width: 20%;
     height: 16px;
 }
 
@@ -506,13 +517,15 @@ header{
 }
 
 .check__result__form{
-    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.875em;
+    margin-top: 1.5rem;
     padding-left: 1rem;
 }
 
-.check__result__form form input{
+.check__result__form input{
     width: 80%;
-    width: 280px;
     height: 50px;
     flex-shrink: 0;
     border-radius: 10px;
@@ -525,25 +538,18 @@ header{
     font-weight: 500;
     line-height: normal;
     padding: 1em;
-    margin-bottom: 2em;
 
 }
 
-.check__result__form form input:hover{
-    border: 3px solid #17C2EC;
-    color: var(--white-colour);
-}
 
 .check__result__form button{
     display: flex;
-    
     width: 150px;
     height: 50px;
     padding: 20px 25px;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex-shrink: 0;
     border-radius: 10px;
     border: 3px solid #17C2EC;
     background: rgba(196, 196, 196, 0.10);
@@ -555,11 +561,11 @@ header{
     justify-content: space-around;
     height: 50px;
     flex-shrink: 0;
-    margin: 3em 2em;
+    margin: 3em auto;
     width: 80%;
     text-align: center;
-    padding: 0.5em 0.5em;
-    border-radius: 10px;
+    padding: 1em 1em;
+    border-radius: 20px;
     background: rgba(196, 196, 196, 0.05);
     
 }
@@ -593,12 +599,15 @@ header{
     margin-bottom: 20px;
 }
 
+
+
 .why__get__vaccine__detail p{
     color: rgba(255, 255, 255, 0.50);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    max-width: 400px;
     }
 
 .why__get__vaccine__reasons{
@@ -687,7 +696,7 @@ header{
 }
 
 
-/* =================Get Vaccine Today========== */
+/* ===================== Vaccine Registeration ================== */
 .get__vaccine__today{
     background: var(--white-colour);
     row-gap: 1.875em;
@@ -701,7 +710,6 @@ header{
 }
 
 .get__vaccine__today__title{
-    
     text-align: center;
     z-index: 10;
 }
@@ -713,6 +721,8 @@ header{
     font-weight: var(--font-bold);
     line-height: normal;
 }
+
+
 
 .get__vaccine__today__img{
     width: 289.028px;
@@ -1050,13 +1060,11 @@ header{
 
 .footer {
     position: relative;
-    padding-top: 8em;
-    padding-left: 2em;
-    padding-bottom: 1.875em;
+    padding: 10em 8em 1.875em;
 }
 
 .quote {
-    width: 305px;
+    width: 60%;
     height: 206px;
     border-radius: 20px;
     background: rgba(196, 196, 196, 0.15);
@@ -1070,12 +1078,13 @@ header{
 }
 
 .quote_container{
-    width: 280px;
+    width: 80%;
     height: 147px;
     border-radius: 10px;
     background: #17C2EC;
     padding: 1em 1.5em 1.875em;
     text-align: center;
+    margin: auto;
 }
 
 .quote_container h2 {
@@ -1096,6 +1105,7 @@ header{
 .email_container {
     display: flex;
     align-items: center;
+    margin: auto;
 }
 
 .input {
@@ -1130,17 +1140,19 @@ header{
     justify-content: center;
 }
 
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
+
 
 .footer__menu h2{
     font-size: 1.125em;
     font-weight: var(--font-bold);
     line-height: normal;
-    margin-bottom: 1.875em;
 }
 
-.footer__item {
-    margin-bottom: 10px;
-}
 
 .footer__link{
     color: rgba(255, 255, 255, 0.50);
@@ -1164,5 +1176,307 @@ header{
 }
 
 
-/* Blur header */
+/* =============================== SCROLL BAR =================================== */
 
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: hsl(28, 12%, 15%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(28, 12%, 25%);
+}
+::-webkit-scrollbar-thumb:hover {
+    width: .6rem;
+    background-color: hsl(28, 12%, 35%);
+}
+
+/* =========================SCROLL UP ========================== */
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0 12px 24px hsl(0,0,0,0.3);
+    display: inline-flex;
+    padding: 6px;
+    font-size: 1.25rem;
+    z-index: 100;
+    transition: bottom .4s, transform .4s;
+    border-radius: 5px;
+}
+
+.scrollup:hover {
+    transform : translateY(-.5rem)
+}
+
+/* Show scroll up */
+.show-scroll {
+    bottom: 3rem;
+}
+
+
+
+/* -------------------------- RESPONSIVENESS --------------------------- */
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+
+    .nav__menu {
+        width: 50%;
+    }
+
+    .schedule__container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 2em;
+    }
+
+    .schedule__item {
+        width: 40%;
+        margin: 10px;
+    }
+
+
+    .img__brand{
+        height: 34px;
+    }
+
+    .check__result__title{
+        font-size: 1.25em;
+        font-weight: var(--font-bold);
+    }
+
+    .check__result__form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 1em auto;
+        row-gap: 1.5em;
+    }
+
+    .check__result__certificate__need p{
+        font-size: 1em;
+    }
+
+    .other__reasons {
+        flex-direction: row;
+        column-gap: 2em;
+        padding-bottom: 2em;
+    }
+
+}
+
+/* Large Tablets */
+@media screen and (min-width: 768px) {
+
+    .home__main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .get__vaccine__today__title h2 {
+        text-align: left;
+        font-size: var(--h1-font-size);
+    }
+
+    .get__vaccine__today__flex {
+        flex-direction: row-reverse;
+    }
+
+}
+
+/* For Large Devices */
+
+@media screen and (min-width: 1150px) {
+
+    .nav {
+        height: calc(var(--header-height));
+    }
+
+    .header {
+        padding: 1em 8em;
+    }
+
+    .section {
+        padding: 2rem 8rem;
+    }
+
+    .nav__menu{
+        width: initial;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 3em;
+        padding: auto 1em;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.5em;
+    }
+
+    .nav__toggle,
+    .nav__close {
+        display: none;
+    }
+
+    .nav__link {
+        font-size: 1em;
+        text-wrap: nowrap;
+    }
+
+    .btn__status {
+        margin-top: 0;
+        border-radius: 20px;
+        background: rgba(196, 196, 196, 0.10);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        color: var(--secondary-color);
+    }
+
+    .container{
+        margin: 1.5rem 2rem; 
+    }
+
+    .home {
+        padding-top: 8em;
+    }
+    .home__main{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2em;
+    }
+
+    .home__image {
+        max-width: 500px;
+    }
+
+    .home__data {
+        max-width: 1200px;
+    }
+
+    .home-title-header{
+        font-size: var(--h3-font-size);
+    }
+
+    .home__title h1{
+        font-size: 2.5em;
+
+    }
+
+    .home__title__footer{
+        font-size: 1em;
+    }
+
+    .button{
+        display: inline-flex;
+        padding: 20px 25px;
+        align-items: flex-start;
+        font-size: 1.25em;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    .schedule__time p{
+        font-size: 1.5em;
+    }
+
+    .schedule__container{
+        display: flex;
+        justify-content: space-between;
+        padding: 2.5em;
+    }
+
+    .schedule__item{
+        width: 20%;
+    }
+
+    .img__brand{
+        height: 50px;
+    }
+
+    .home_brands{
+        column-gap: 3em;
+    }
+
+    .check__result__title{
+        text-align: left;
+    }
+
+    .check__result__form{
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1em;
+        margin: 3em auto;
+    }
+
+    .check__result__form input {
+        width: 40%;
+    }
+
+    .schedule__item__info__title,
+    .schedule__item__info__detail{
+        font-size: 20px;
+    }
+
+    .feedback {
+        padding-bottom: 10em;
+    }
+
+    .testimonials{
+        flex-direction: row;
+        column-gap: 1em;
+    }
+
+    .footer__menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__list {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2em;
+    }
+
+    .why__get__vaccine {
+        padding: 2em 12em;
+    }
+
+    .why__get__vaccine__detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .why__get__vaccine__detail p {
+        max-width: 300px;
+    }
+
+    .why__get__vaccine__reasons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .other__reasons {
+        column-gap: 8em;
+    }
+
+
+    }
+
+
+
+    
+
+    
+}
