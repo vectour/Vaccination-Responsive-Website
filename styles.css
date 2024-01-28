@@ -1064,7 +1064,7 @@ header{
 }
 
 .quote {
-    width: 60%;
+    width: 80%;
     height: 206px;
     border-radius: 20px;
     background: rgba(196, 196, 196, 0.15);
@@ -1078,7 +1078,7 @@ header{
 }
 
 .quote_container{
-    width: 80%;
+    width: 90%;
     height: 147px;
     border-radius: 10px;
     background: #17C2EC;
@@ -1285,6 +1285,14 @@ header{
 
     .get__vaccine__today__flex {
         flex-direction: row-reverse;
+    }
+
+    .quote{
+        width: 70%;
+    }
+
+    .quote_container {
+        width: 80%;
     }
 
 }
