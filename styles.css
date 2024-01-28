@@ -425,6 +425,7 @@ header{
     flex-direction: column;
     row-gap: 1rem;
     transition: all .1s ease;
+    
 }
 
 .schedule__item{
@@ -461,6 +462,7 @@ header{
 .schedule__btn{
     margin-top: 1rem;
     text-align: center;
+    width: 40%;
 
 }
 
