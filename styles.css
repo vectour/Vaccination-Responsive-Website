@@ -880,7 +880,9 @@ header{
     position: absolute;
     bottom: 0;
     z-index: -10;
-    left: 18%;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .covid__prevention__detail{
@@ -923,7 +925,7 @@ header{
 .symptoms__group__2,
 .symptoms__group__3{
     margin: 0.5em auto;
-    padding-left: 1em;
+
 }
 
 
@@ -1283,6 +1285,7 @@ header{
     .get__vaccine__today__title h2 {
         text-align: left;
         font-size: var(--h1-font-size);
+        margin-left: 3em;
     }
 
     .get__vaccine__today__flex {
@@ -1295,6 +1298,20 @@ header{
 
     .quote_container {
         width: 80%;
+    }
+
+    .symptoms__group__1{
+    width: 60%;
+
+    }
+
+    .symptoms__group__2{
+        width: 70%;
+    }
+
+    .symptoms__group__3{
+        width: 80%;
+
     }
 
 }
@@ -1434,6 +1451,20 @@ header{
         font-size: 20px;
     }
 
+    .symptoms__group__1{
+    width: 30%;
+
+    }
+
+    .symptoms__group__2{
+        width: 50%;
+    }
+
+    .symptoms__group__3{
+        width: 70%;
+
+    }
+
     .feedback {
         padding-bottom: 10em;
     }
@@ -1482,7 +1513,7 @@ header{
     }
 
 
-    }
+    
 
 
 
